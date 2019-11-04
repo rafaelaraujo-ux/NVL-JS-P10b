@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Práctica de bucles (II)</title>
+</head>
+
+<body>
+    
+    <script type="application/javascript">
+        
+        //Con esta variable genera números al azar entre 1 y 100:
+        
+        var numeroAleatorio = Math.floor(Math.random()*100)+1;
+        
+        //Creo dos array vacías, uno para los números impares y otro para los pares.
+        
+        var numImpar = new Array();
+        
+        var numPar = new Array();
+        
+        //Se forma el bucle for en la que se crea una nueva variable i con valor 0, con la condición de que el valor i tiene que ser menor que 50 para ser ejecutado
+        
+		for(var i=0;i<50;i++){
+            
+            //Utilizo la condicional if para los números impares.
+            
+            if(numeroAleatorio % 2){
+            
+            //guarda el nuevo valor al final del array de los números impares.
+                
+            numImpar.push(numeroAleatorio);
+                
+            //He utilizado la función console para que muestre como los va guardando.
+                
+            console.log(numImpar);
+                
+            //Llamo otra vez a la función para que genere otro nuevo número aleatorio del 1 al 100.
+                
+            numeroAleatorio = Math.floor(Math.random()*100)+1;
+            
+            }
+            
+            //esta parte pertenece a aquellos números que sean par.
+
+            else {
+            
+            //Añade el nuevo valor al final del array que guarda los números pares
+            
+            numPar.push(numeroAleatorio);
+
+            //document.write((numeroAleatorio) + " es par; ");
+            
+            console.log(numPar)
+
+            numeroAleatorio = Math.floor(Math.random()*100)+1;
+
+            }
+            
+		}
+        
+
+    </script>
+    
+    
+</body>
+</html>
